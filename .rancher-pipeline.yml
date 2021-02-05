@@ -6,11 +6,12 @@ stages:
       buildContext: .
       tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_REPO_NAME}:${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
       pushRemote: true
-      registry: 10.20.0.73:32443
+      registry: harbor-demo.iiidevops.org
     env:
       PLUGIN_BUILD_ARGS: --progress=tty --network=host
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
+      PLUGIN_MIRROR: https://harbor-demo.iiidevops.org
       PLUGIN_MTU: "1000"
 # 部屬使用者應用(app)
 - name: Deploy app-web
@@ -23,16 +24,16 @@ stages:
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
         pipeline.sequence: ${CICD_EXECUTION_SEQUENCE}
-        xip.ip: "10.20.0.74"
-        harbor.host: "10.20.0.73:32443"
+        xip.ip: "10.20.0.77"
+        harbor.host: "harbor-demo.iiidevops.org"
         # 基礎pipeline參數
-        git.host: "10.20.0.73"
+        git.host: "10.20.0.77"
         git.url: ${CICD_GIT_URL}
         git.branch: ${CICD_GIT_BRANCH}
         git.commitID: ${CICD_GIT_COMMIT}
         git.repoName: ${CICD_GIT_REPO_NAME}
         # web參數設定
-        web.type: spring
+        web.type: spring 
         # 10.50.1.63:5443/app/${CICD_GIT_REPO_NAME}-web
         web.image: ${CICD_GIT_REPO_NAME}/${CICD_GIT_REPO_NAME}
         web.tag: ${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
@@ -47,7 +48,7 @@ stages:
       targetNamespace: ${CICD_GIT_REPO_NAME}
       answers:
         # 這裡是為了50與140環境測試
-        git.host: "10.20.0.73"
+        git.host: "gitlab-demo.iiidevops.org"
         # 這裡是為了告訴要處理的git來源為何
         git.repoName: ${CICD_GIT_REPO_NAME}
         git.branch: ${CICD_GIT_BRANCH}
@@ -58,5 +59,4 @@ stages:
         db.password: password
         # 使用者初始想要建立的資料庫名稱
         db.name: mydb
-timeout: 60
 notification: {}
