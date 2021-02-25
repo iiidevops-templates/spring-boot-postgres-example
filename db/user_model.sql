@@ -14,4 +14,11 @@ INSERT INTO "user_model" ("id", "name") VALUES
 (14,	'user-11'),
 (10,	'user-id-10');
 
+create sequence HIBERNATE_SEQUENCE
+minvalue 100000
+maxvalue 9999999999999999
+start with 100060
+increment by 1
+cache 20;
+
 -- 2021-02-25 03:46:49.917912+00
