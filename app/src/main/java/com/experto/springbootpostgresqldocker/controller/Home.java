@@ -8,7 +8,7 @@ public class Home {
 
     @RequestMapping("/")
     public String home() {
-        return "{網站URL}/user/all: 會顯示全部資料庫內的使用者 <br> {網站URL}/user/{id}: 會顯示該id的使用者資訊";
+        return "{網站URL}/user/all: GET會顯示全部資料庫內的使用者 <br> {網站URL}/user/{id}: GET會顯示該id的使用者資訊 <br> {網站URL}/user/save: POST新增使用者到資料庫 <br> 詳細可看readme說明";
     }
 
 }
