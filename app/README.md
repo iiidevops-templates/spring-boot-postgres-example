@@ -28,6 +28,11 @@ curl -s -X POST \
 curl -s -X GET \
   http://localhost:8080/user/1 
   
+```
+test {
+	useJUnitPlatform()
+}
+```
   
 ## Complete explanation
 english: https://experto.dev/en/spring-boot-with-postgresql-and-docker-compose/   
