@@ -3,7 +3,7 @@
 ## 如何增加Sonarqube掃描(用預設的QualiyGate)
 在`app/build.gradle`的檔案內plugins新增`id "org.sonarqube" version "3.1.1"`後pipeline即可運行Sonarqube掃描   
 若要設定其他額外的細節也可寫在`app/build.gradle`，例如排除特定資料夾(與程式碼無關的)、指定的QualityGate、Rule等等  
-相關可用額外參數說明可參考[sonarscanner-for-maven](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/)
+相關可用額外參數說明可參考[sonarscanner-for-gradle](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-gradle/)
 
 ## 範例教學來源：https://gustavopeiretti.com/spring-boot-with-postgresql-and-docker-compose/
 * GET`部屬URL/user/all`: 列出資料庫內所有使用者  
