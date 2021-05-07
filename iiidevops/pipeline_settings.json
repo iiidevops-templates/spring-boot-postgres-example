@@ -1,0 +1,24 @@
+{
+  "name": "(zap exp) Spring Boot with PostgreSQL - simple api",
+  "description": "SpringBoot 2.2.1.RELEASE / Gradle jdk8 / PostgreSQL 10.2 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/spring-postgresql-template2/blob/master/README.md' target='_blank'>simple API範本說明</a>",
+  "arguments": [
+    {
+      "key": "db.username",
+      "display": "DB Username",
+      "default_value": "iiidevops",
+      "input_type": "text"
+    },
+    {
+      "key": "db.password",
+      "display": "DB Password",
+      "default_value": "templatePassword",
+      "input_type": "password"
+    },
+    {
+      "key": "db.name",
+      "display": "DB Name",
+      "default_value": "todo_db",
+      "input_type": "text"
+    }
+  ]
+}
