@@ -1,6 +1,6 @@
 {
   "name": "Spring Boot with PostgreSQL - simple api",
-  "description": "SpringBoot 2.2.1.RELEASE / Gradle jdk8 / PostgreSQL 10.2 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/spring-postgresql-template2/blob/master/README.md' target='_blank'>simple API範本說明</a>",
+  "description": "Spring Boot 2.2.1.RELEASE / Gradle jdk8 / PostgreSQL 10.2 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/spring-postgresql-template2/blob/master/README.md' target='_blank'>simple API範本說明</a>",
   "arguments": [
     {
       "key": "db.username",
