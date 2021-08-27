@@ -1,6 +1,6 @@
 {
   "name": "Java Spring Boot (Gradle) with PostgreSQL - Simple API",
-  "description": "SpringBoot 2.2.1.RELEASE / Gradle jdk8 / PostgreSQL 10.2 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/spring-postgresql-template2/blob/master/README.md' target='_blank'>simple API範本說明</a>",
+  "description": "SpringBoot 2.2.1.RELEASE / Gradle jdk8 / PostgreSQL 10.2 <a class='el-link el-link--primary' href='https://github.com/iiidevops-templates/spring-postgresql-template2/blob/master/README.md' target='_blank'>simple API範本說明</a><hr size=1 /><b>v1.8.0</b><li>支援 SideeX 多測試檔功能<li>彙整 III DevOps Pipeline 相關 Stage 在 UI 統一開關功能",
   "arguments": [
     {
       "key": "db.username",
