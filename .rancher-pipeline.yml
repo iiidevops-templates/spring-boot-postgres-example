@@ -29,7 +29,7 @@ stages:
       targetKey: rancher_url
     runScriptConfig:
       image: library/gradle:jdk11
-      shellScript: chmod 777 SonarScan.sh; ./SonarScan.sh
+      shellScript: chmod 777 SonarScan; ./SonarScan
   when:
     branch:
       include:
