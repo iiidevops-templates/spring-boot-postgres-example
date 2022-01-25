@@ -21,12 +21,16 @@ stages:
 - name: Test--SonarQube for Java(Gradle)
   iiidevops: sonarqube
   steps:
-  - runScriptConfig:
-      image: library/gradle:jdk8
-      shellScript: ls && cd app && chmod -R 777 . && ./gradlew -Dsonar.host.url=http://sonarqube-server-service.default:9000
-        -Dsonar.projectKey=${CICD_GIT_REPO_NAME} -Dsonar.projectVersion=${CICD_GIT_BRANCH}:${CICD_GIT_COMMIT}
-        -Dsonar.log.level=DEBUG -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=600
-        sonarqube
+  - envFrom:
+    - sourceKey: API_TOKEN
+      sourceName: pipeline-api-key
+      targetKey: rancher_api_token
+    - sourceKey: rancher-url
+      sourceName: rancher
+      targetKey: rancher_url
+    runScriptConfig:
+      image: library/gradle:jdk11
+      shellScript: chmod 777 SonarScan.sh; ./SonarScan.sh
   when:
     branch:
       include:
