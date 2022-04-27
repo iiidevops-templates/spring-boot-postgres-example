@@ -6,9 +6,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Home {
 
-    @RequestMapping("/")
+    @RequestMapping(value="/", method = RequestMethod.GET)
     public String home() {
-        return "{ç¶²ç«™URL}/user/all: GETæœƒé¡¯ç¤ºå…¨éƒ¨è³‡æ–™åº«å…§çš„ä½¿ç”¨è€… <br> {ç¶²ç«™URL}/user/{id}: GETæœƒé¡¯ç¤ºè©²idçš„ä½¿ç”¨è€…è³‡è¨Š <br> {ç¶²ç«™URL}/user/save: POSTæ–°å¢ä½¿ç”¨è€…åˆ°è³‡æ–™åº« <br> è©³ç´°å¯çœ‹readmeèªªæ˜";
+        return "{ºô¯¸URL}/user/all: GET·|Åã¥Ü¥ş³¡¸ê®Æ®w¤ºªº¨Ï¥ÎªÌ <br> {ºô¯¸URL}/user/{id}: GET·|Åã¥Ü¸Óidªº¨Ï¥ÎªÌ¸ê°T <br> {ºô¯¸URL}/user/save: POST·s¼W¨Ï¥ÎªÌ¨ì¸ê®Æ®w <br> ¸Ô²Ó¥i¬İreadme»¡©ú";
     }
 
+	@RequestMapping(value="/hello", method = RequestMethod.GET)
+	public String index() {
+		return "Greetings from Spring Boot!";
+	}
 }
