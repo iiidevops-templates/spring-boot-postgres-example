@@ -1,4 +1,4 @@
-FROM dockerhub/library/gradle:jdk8 as builder
+FROM dockerhub/library/gradle:7.4.1-jdk8 as builder
 COPY ./app /app
 WORKDIR /app
 RUN ls && gradle build
